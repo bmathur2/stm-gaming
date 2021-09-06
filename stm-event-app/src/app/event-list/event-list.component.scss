@@ -1,0 +1,27 @@
+.event-list {
+    width: 880px;
+    padding: 0px;
+    margin: 30px auto;
+}
+
+.event-list h3 {
+    font-size: 32px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.event-list table {
+    border: 1px solid #ddd;
+    th {
+        background: #ddd;
+    }
+    td {
+        background: #fff;
+        .btn-delete {
+            color: red;
+            cursor: pointer;
+        }
+    }
+}

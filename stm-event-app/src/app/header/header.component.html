@@ -1,0 +1,25 @@
+<div class="header-section">
+    <div class="fix-container">
+        <div class="header-box">
+            <div class="top-logo">
+                <img src="/assets/images/logo.png" alt="Logo">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a routerLink="/event-create" routerLinkActive="active" *ngIf="getStatus()">Create Your Event</a>
+                    </li>
+                    <li>
+                        <a (click)="logOut()" *ngIf="getStatus()" class="btn-delete">Log Out</a>
+                    </li>
+                    <li>
+                        <a routerLink="/login" routerLinkActive="active" *ngIf="!getStatus()">Login</a>
+                    </li>
+                    <li>
+                        <a routerLink="/register" routerLinkActive="active" *ngIf="!getStatus()">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

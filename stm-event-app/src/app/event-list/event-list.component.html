@@ -1,0 +1,20 @@
+<div class="event-list">
+    <h3>Event List</h3>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
+        <tr>
+            <th width="120">Event Name</th>
+            <th width="120">Event Date</th>
+            <th>Event Description</th>
+            <th colspan="2">Action</th>
+
+        </tr>
+        <tr *ngFor="let event of events; let i = index">
+            <td>{{event.Name}}</td>
+            <td>{{event.Date}}</td>
+            <td>{{event.Desc}}</td>
+            <td><a routerLink="/event-edit/{{i}}">Edit</a></td>
+            <td><a (click)="deleteEvent(i)" class="btn-delete">Delete</a></td>
+        </tr>
+
+    </table>
+</div>

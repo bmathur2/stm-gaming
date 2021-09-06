@@ -1,0 +1,53 @@
+<div class="login-form">
+    <h3>Register</h3>
+    <form [formGroup]="registerForm" (ngSubmit)="doRegister()">
+        <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" placeholder="Enter First Name" formControlName="FirstName" [ngClass]="{ 'is-invalid': f.FirstName.errors && registerForm_Submitted}">
+            <div class="invalid-feedback" *ngIf="registerForm.controls['FirstName'].hasError('required') && registerForm_Submitted">
+                First Name is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="LastName" [ngClass]="{ 'is-invalid': f.LastName.errors && registerForm_Submitted}">
+            <div class="invalid-feedback" *ngIf="registerForm.controls['LastName'].hasError('required') && registerForm_Submitted">
+                Last Name is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">User Name</label>
+            <input type="text" class="form-control" placeholder="Enter Username" formControlName="UserName" [ngClass]="{ 'is-invalid': f.UserName.errors && registerForm_Submitted}">
+            <div class="invalid-feedback" *ngIf="registerForm.controls['UserName'].hasError('required') && registerForm_Submitted">
+                User Name is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Enter Email" formControlName="Email" [ngClass]="{ 'is-invalid': f.Email.errors && registerForm_Submitted}">
+            <div class="invalid-feedback" *ngIf="registerForm.controls['Email'].hasError('required') && registerForm_Submitted">
+                Email is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input type="text" class="form-control" placeholder="Enter Phone" formControlName="Phone" [ngClass]="{ 'is-invalid': f.Phone.errors && registerForm_Submitted}">
+            <div class="invalid-feedback" *ngIf="registerForm.controls['Phone'].hasError('required') && registerForm_Submitted">
+                Phone is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder="Enter Password" formControlName="Password" [ngClass]="{ 'is-invalid': f.Password.errors && registerForm_Submitted}">
+            <div class="invalid-feedback" *ngIf="registerForm.controls['Password'].hasError('required') && registerForm_Submitted">
+                Password is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-common">Create</button>
+            <p>Have a account? please Login here <a href="/login">Sign In</a></p>
+        </div>
+    </form>
+</div>

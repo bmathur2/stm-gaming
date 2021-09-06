@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Importing Bootstrap SCSS file. */
+
+@import '~bootstrap/scss/bootstrap';
+.login-form {
+    width: 500px;
+    margin: 50px auto;
+    position: relative;
+    padding: 20px 50px;
+    background: #ccc;
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 22px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    padding: 0px;
+    margin: 10px 0;
+}
+
+.forgot {
+    margin: 5px 0px;
+    display: inline-block;
+}
+
+.btn-common {
+    padding: 5px 10px;
+    overflow: hidden;
+    position: relative;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 3px;
+    background: #8dc63f;
+    box-shadow: none;
+}
+
+.invalid-feedback {
+    font-size: 16px !important;
+}
